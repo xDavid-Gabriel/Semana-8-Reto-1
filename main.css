@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Oxygen", sans-serif;
+}
+
+body {
+  background: url(https://t1.uc.ltmcdn.com/images/3/3/9/como_ordenar_la_casa_rapido_y_facil_49933_orig.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: #87cce4;
+  width: 500px;
+  font-size: 18px;
+  border-radius: 30px;
+}
+input,
+button,
+select {
+  font-size: 18px;
+}
+h1 {
+  padding: 30px 20px 20px 20px;
+  color: rgb(20, 56, 85);
+}
+#todos {
+  padding: 20px;
+}
+.todo {
+  border-radius: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.todo:hover {
+  background-color: rgba(255, 215, 211, 1);
+}
+
+.todo .checkbox-container {
+  width: calc(100% - 36px);
+}
+
+.todo button {
+  border: 0;
+  background: none;
+  background-image: url(delete.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
+.todo button:hover svg {
+  fill: rgb(255, 137, 124);
+}
+
+#lists {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+#lists .list {
+  background-color: #a8e4f4;
+  width: 100%;
+  height: 100%;
+  color: rgb(20, 56, 85);
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+#add-container {
+  background-color: #eee;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+#add-container form {
+  display: flex;
+  align-items: baseline;
+}
+
+#add-container form select {
+  border: 0;
+  background-color: transparent;
+  padding: 5px;
+  outline: none;
+  width: 30%;
+  margin-left: 10px;
+  justify-content: flex-end;
+}
+
+#add-container form input {
+  padding: 10px 0;
+  width: 70%;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+#add-container form::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: solid #aaa;
+  border-width: 0 3px 3px 0;
+  transform: rotate(-45deg);
+  margin-right: 10px;
+}
+
+@media (max-width: 520px) {
+  main {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+  }
+  #lists {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  #lists .list {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 370px) {
+  main {
+    width: 270px;
+  }
+  #add-container form input {
+    font-size: 13px;
+  }
+  #add-container form select {
+    font-size: 13px;
+    width: 40%;
+  }
+}
